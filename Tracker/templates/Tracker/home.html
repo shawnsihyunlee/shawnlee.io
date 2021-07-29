@@ -1,0 +1,16 @@
+{% extends "Tracker/base.html" %}
+
+{% block content %}
+
+<h1>
+    Recent Workouts:
+</h1>
+<ul>
+    {% for workout in recent_workout_list %}
+        <li>{{ workout }}</li>
+    {% endfor %}
+</ul>
+
+<a href="{% url 'Tracker:add_workout' %}"> Add New Workout </a>
+
+{% endblock %}

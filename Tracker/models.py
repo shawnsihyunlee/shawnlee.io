@@ -41,3 +41,5 @@ class Routine(models.Model):
     routine_name = models.CharField("Routine Name", max_length=100)
     num_sets = models.PositiveSmallIntegerField("Number of sets")
     num_reps = models.PositiveSmallIntegerField("Number of reps")
+    def __str__(self):
+        return("{routine}:{sets}x{reps}".format(routine=str(self.routine_name), sets=self.num_sets, reps=self.num_reps))
