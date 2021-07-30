@@ -1,11 +1,16 @@
 {% extends "Tracker/base.html" %}
 
 {% block content %}
-
-<form action="{% url 'Tracker:add_workout' %}" method="post">
+<div class="form-group">
+    <form action="{% url 'Tracker:add_workout' %}" method="post" class=>
     {% csrf_token %}
+    
     {{ form }}
+
     <input type="submit" value="Submit">
-</form>
+    
+    </form>
+</div>
+
 
 {% endblock %}
