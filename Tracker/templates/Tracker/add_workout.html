@@ -2,7 +2,7 @@
 
 {% block content %}
 <div class="form-group">
-    <form action="{% url 'Tracker:add_workout' %}" method="post" class=>
+    <form action="{% url 'Tracker:add_workout' %}" method="post">
     {% csrf_token %}
     
     {{ form }}
