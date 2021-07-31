@@ -24,3 +24,20 @@ def AddWorkoutView(request):
         form = WorkoutForm()
 
     return render(request, 'Tracker/add_workout.html', {'form': form})
+
+def EditWorkoutView(request, workout_id):
+    # if this is a POST request we need to process the form data
+    instance=Workout.objects.get(pk=workout_id)
+    if request.method == 'POST':
+        # create a form instance and populate it with data from the request:
+        form = WorkoutForm(request.POST, instance=instance)
+        # check whether it's valid:
+        if form.is_valid():
+            form.save()
+            return HttpResponseRedirect(reverse('Tracker:home'))
+
+    # if a GET (or any other method) we'll create a blank form
+    else:
+        form = WorkoutForm(instance=instance)
+
+    return render(request, 'Tracker/edit_workout.html', {'form': form, 'workout_id':workout_id})
