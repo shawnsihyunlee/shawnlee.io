@@ -1,0 +1,17 @@
+{% extends "Tracker/base.html" %}
+
+{% block content %}
+
+{% load crispy_forms_tags %}  
+
+<form action="{% url 'Tracker:add_routine' workout_id %}" method="post">
+    {% csrf_token %}
+    
+    {{ form|crispy }}
+
+    <input class="btn btn-primary" type="submit" value="Submit">
+    
+</form>
+
+
+{% endblock %}
