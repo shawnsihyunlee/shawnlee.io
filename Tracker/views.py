@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from django.http import HttpResponse, HttpResponseRedirect
 from django.urls import reverse
 from .models import Workout, Routine
@@ -27,7 +27,8 @@ def AddWorkoutView(request):
 
 def EditWorkoutView(request, workout_id):
     # if this is a POST request we need to process the form data
-    instance=Workout.objects.get(pk=workout_id)
+    instance = get_object_or_404(Workout, pk=workout_id)
+    
     if request.method == 'POST':
         # create a form instance and populate it with data from the request:
         form = WorkoutForm(request.POST, instance=instance)
@@ -54,11 +55,11 @@ def AddRoutineView(request, workout_id):
 
     # if a GET (or any other method) we'll create a blank form
     else:
-        form = RoutineForm(initial={'workout': Workout.objects.get(pk=workout_id)})
+        form = RoutineForm(initial={'workout': get_object_or_404(Workout, pk=workout_id)})
 
     return render(request, 'Tracker/add_routine.html', {'form': form, 'workout_id':workout_id})
 
 def DeleteRoutineView(request, routine_id):
-    routine = Routine.objects.get(pk = routine_id)
+    routine = get_object_or_404(Routine, pk=routine_id)
     routine.delete()
     return HttpResponseRedirect(reverse('Tracker:home'))

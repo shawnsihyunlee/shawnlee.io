@@ -1,11 +1,11 @@
-{% extends "Tracker/base.html" %}
+{% extends "Tracker/navbar.html" %}
 
 {% block content %}
 
 <h1>
     Recent Workouts:
 </h1>
-
+<!-- Watch this for transparent navbar! https://www.youtube.com/watch?v=kmmxxfyufLE -->
 
 <div class="accordion" id="accordionExample">
     {% for workout in recent_workout_list %}
@@ -36,7 +36,7 @@
 </div>
 <br>
 
-<button type="button" class="btn btn-primary" onclick="location.href={% url 'Tracker:add_workout' %};">
+<button type="button" class="btn btn-primary" onclick="location.href='{% url 'Tracker:add_workout' %}';">
     Add New Workout
 </button>
 
