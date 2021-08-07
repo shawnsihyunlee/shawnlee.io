@@ -3,58 +3,61 @@
 
 {% block navbar %}
 
-    <link href="{% static 'homepage/style.css' %}" rel="stylesheet">
-<div class="fixed-top" data-toggle="affix">
-
-
-<nav class="navbar navbar-expand-lg navbar-light scrolling-navbar">
-    <div class="container-fluid">
-              <div class="collapse navbar-collapse" id="navbarSupportedContent">
-
-        <!-- Left -->
-        <ul class="navbar-nav mx-auto">
-            <li class="nav-item text-center">
-            <a class="nav-link"  id="logo" href="{% url 'homepage:home' %}">
-            <strong>Shawn Lee</strong>
-            </a>
-          </li>
-                  </ul>
+<div class="fixed-top" id="navbarDiv" data-toggle="affix">
+    
+    <!-- Title -->
+    
+    <nav class="navbar navbar-expand-lg navbar-light p-md-3" style="padding-bottom:0px !important">
+        <div class="container-fluid">
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item text-center">
+                        <a class="nav-link"  id="logo" href="{% url 'homepage:home' %}" style="padding-bottom:0px">
+                        <strong>Shawn Lee</strong>
+                        </a>
+                    </li>
+                </ul>
         </div>
     </div>
   </nav>
+    
+    <!-- Main Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light p-md-3" style="padding-top:0px !important">
+      <div class="container-fluid">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
-
-<nav class="navbar navbar-expand-lg navbar-light scrolling-navbar" id="main_navbar">
-    <div class="container-fluid">
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-      <!-- Brand -->
-      
-      <!-- Links -->
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-
-        <!-- Left -->
-        <ul class="navbar-nav mx-auto">
-          <li class="nav-item active text-center">
-            <a class="nav-link" href="{% url 'homepage:home' %}">Home</a>
-          </li>
-          <li class="nav-item text-center">
-            <a class="nav-link" href="{% url 'homepage:home' %}">About Me</a>
-          </li>
-
-            
-          <li class="nav-item text-center">
-            <a class="nav-link" href="{% url 'Tracker:home' %}">Workout Tracker</a>
-          </li>
-          <li class="nav-item text-center">
-            <a class="nav-link" href="{% url 'homepage:home' %}">To be added</a>
-          </li>
-        </ul>
-
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item text-center">
+              <a class="nav-link" href="#">Home</a>
+            </li>
+            <li class="nav-item text-center">
+              <a class="nav-link" href="#">About</a>
+            </li>
+            <li class="nav-item text-center">
+              <a class="nav-link" href="#">Blog</a>
+            </li>
+            <li class="nav-item text-center">
+              <a class="nav-link" href="#">Pricing</a>
+            </li>
+            <li class="nav-item text-center">
+              <a class="nav-link" href="#">Contact</a>
+            </li>
+          </ul>
+        </div>
       </div>
-
-    </div>
-  </nav>
+    </nav>
 </div>
+
+
 {% endblock %}

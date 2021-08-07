@@ -1,3 +1,10 @@
+
+@font-face {
+  font-family: 'Permanent Marker';
+  src: url('/fonts/PermanentMarker-Regular.ttf') format("truetype");
+}
+
+
 #logo {
     font-size: 40px;
 }
@@ -50,3 +57,4 @@
         opacity: 1;
     }
 }
+

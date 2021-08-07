@@ -5,9 +5,70 @@
 {%block content%}
 
 
-<div class="container-fluid w-100 h-100 m-0 p-0">  
+    <div
+      class="banner-image w-100 vh-100 d-flex justify-content-center align-items-center"
+      style="background-image: url('{% static 'homepage/images/background.jpg' %}'); background-size: cover; background-position: center bottom;"
+    >
+      <div class="content text-center">
+        <h1 class="display-1" style="font-family: 'Permanent Marker'; animation: fadein 2s;">DAYS UNTIL DISCHARGE:</h1>
+      </div>
+    </div>
 
-    <img src="{% static 'homepage/images/background.jpg' %}" class="img-fluid w-100 h-auto p-0 m-0" alt="Patience">           
+    <!-- Main Content Area -->
+    <div class="container my-5 d-grid gap-5">
+      <div class="p-5 border">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Necessitatibus veniam ipsa earum quibusdam, atque ipsum error maiores
+          natus iusto fugit id saepe neque rerum magni laudantium accusantium
+          dolorem numquam quasi.
+        </p>
+      </div>
+      <div class="p-5 border">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Necessitatibus veniam ipsa earum quibusdam, atque ipsum error maiores
+          natus iusto fugit id saepe neque rerum magni laudantium accusantium
+          dolorem numquam quasi.
+        </p>
+      </div>
+      <div class="p-5 border">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Necessitatibus veniam ipsa earum quibusdam, atque ipsum error maiores
+          natus iusto fugit id saepe neque rerum magni laudantium accusantium
+          dolorem numquam quasi.
+        </p>
+      </div>
+      <div class="p-5 border">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Necessitatibus veniam ipsa earum quibusdam, atque ipsum error maiores
+          natus iusto fugit id saepe neque rerum magni laudantium accusantium
+          dolorem numquam quasi.
+        </p>
+      </div>
+      <div class="p-5 border">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Necessitatibus veniam ipsa earum quibusdam, atque ipsum error maiores
+          natus iusto fugit id saepe neque rerum magni laudantium accusantium
+          dolorem numquam quasi. df
+        </p>
+      </div>
+    </div>
 
-</div>
+
+    <script type="text/javascript">
+      var nav = document.getElementById('navbarDiv');
+
+      window.addEventListener('scroll', function () {
+        if (window.pageYOffset > 300) {
+          nav.classList.add('bg-light', 'shadow');
+        } else {
+          nav.classList.remove('bg-light', 'shadow');
+        }
+      });
+    </script>
+
 {% endblock %}
