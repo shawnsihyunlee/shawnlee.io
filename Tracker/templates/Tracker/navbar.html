@@ -3,11 +3,11 @@
 
 {% block navbar %}
 
-<div class="fixed-top" id="navbarDiv" data-toggle="affix">
+<div class="fixed-top bg-light shadow" id="navbarDiv" data-toggle="affix">
     
     <!-- Title -->
     
-    <nav class="navbar navbar-expand-lg navbar-light p-md-3" style="padding-bottom:0px !important">
+    <!-- <nav class="navbar navbar-expand-lg navbar-light p-md-3" style="padding-bottom:0px !important">
         <div class="container-fluid">
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav mx-auto">
@@ -19,7 +19,11 @@
                 </ul>
         </div>
     </div>
-  </nav>
+  </nav> -->
+    
+    <div class="content text-center">
+        <a class="display-4" href="{% url 'homepage:home' %}" style="color:black; text-decoration:none; animation: fadein 2s; padding:10px !important">Shawn Lee</a>
+    </div>
     
     <!-- Main Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light p-md-3" style="padding-top:0px !important">
@@ -39,19 +43,19 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav mx-auto">
             <li class="nav-item text-center">
-              <a class="nav-link" href="#">Home</a>
+              <a class="nav-link" href="{% url 'homepage:home' %}">Home</a>
             </li>
             <li class="nav-item text-center">
-              <a class="nav-link" href="#">About</a>
+              <a class="nav-link" href="#">About Me</a>
             </li>
             <li class="nav-item text-center">
               <a class="nav-link" href="#">Blog</a>
             </li>
             <li class="nav-item text-center">
-              <a class="nav-link" href="#">Pricing</a>
+              <a class="nav-link" href="#">Memories</a>
             </li>
             <li class="nav-item text-center">
-              <a class="nav-link" href="#">Contact</a>
+              <a class="nav-link" href="{% url 'Tracker:home' %}">Workout Tracker</a>
             </li>
           </ul>
         </div>

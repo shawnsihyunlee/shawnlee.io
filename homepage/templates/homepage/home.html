@@ -3,15 +3,34 @@
 {% load static %}
 
 {%block content%}
-
+    
+    <style>
+        body { 
+            padding-top: 0px !important; 
+        }
+    </style>
 
     <div
-      class="banner-image w-100 vh-100 d-flex justify-content-center align-items-center"
+      class="banner-image vh-100 d-flex align-items-center"
       style="background-image: url('{% static 'homepage/images/background.jpg' %}'); background-size: cover; background-position: center bottom;"
     >
-      <div class="content text-center">
-        <h1 class="display-1" style="font-family: 'Permanent Marker'; animation: fadein 2s;">DAYS UNTIL DISCHARGE:</h1>
-      </div>
+
+        
+    <div class="container-sm">
+            <div class="content text-center">
+            <h1 class="display-1" style="font-family: 'Permanent Marker'; animation: fadein 2s;">DAYS UNTIL DISCHARGE:</h1>
+            </div>
+ 
+            <div class="progress"  style="margin:10px; margin-top: 50px; margin-bottom: 150px;">
+                <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width:47% ; background-color:#5e8078;" aria-valuenow="47" aria-valuemin="0" aria-valuemax="100">47%</div>
+            </div>
+    </div>
+
+        
+        
+            
+
+
     </div>
 
     <!-- Main Content Area -->
@@ -61,7 +80,7 @@
 
     <script type="text/javascript">
       var nav = document.getElementById('navbarDiv');
-
+        nav.classList.remove('bg-light', 'shadow');
       window.addEventListener('scroll', function () {
         if (window.pageYOffset > 300) {
           nav.classList.add('bg-light', 'shadow');
