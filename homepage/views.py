@@ -5,3 +5,9 @@ from django.urls import reverse
 # Create your views here.
 def HomeView(request):
     return render(request, "homepage/home.html")
+
+def AboutView(request):
+    return render(request, "homepage/about.html")
+
+def BlogView(request):
+    return render(request, "homepage/blog.html")
