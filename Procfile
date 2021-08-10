@@ -1,1 +1,1 @@
-web: gunicorn WorkoutTracker.wsgi --log-file -git 
+web: gunicorn WorkoutTracker.wsgi
