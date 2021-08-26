@@ -1,20 +1,26 @@
 {% extends 'Tracker/navbar.html' %}
 
 {% block content %}
+
+<style>
+    .feed-item-title {
+        font-weight: 700;
+        font-size: 30px;
+    }
+</style>
+
 <div class="container">
-    <h1 class="display-3 text-center">
+    <h1 class="display-3 text-center" style="font-weight: 700;">
         Blog
     </h1>
     
     <div class="p-5 border">
-        <p>
-        Go away, I haven't started on this part of my website yet.
-        </p>
-        <p>
-        I'm probably in training right now for two weeks, so I won't get time to work on this until like September.
-        </p>
+        <script src="//rss.bloople.net/?url=https%3A%2F%2Fshawnleemilitary.wordpress.com%2Ffeed%2F&showtitle=false&type=js"></script>
       </div>
     
     
 </div>
+
+
+
 {% endblock %}
