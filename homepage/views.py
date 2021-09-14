@@ -9,24 +9,31 @@ def striphtml(data):
         return p.sub('', data)
     
 rssURL = 'https://shawnleemilitary.wordpress.com/feed/'
-feed = feedparser.parse(rssURL)
-entries = [{"title" : a["title"], 
+
+
+# Create your views here.
+def HomeView(request):
+    feed = feedparser.parse(rssURL)
+    entries = [{"title" : a["title"], 
                 "link" : a["link"], 
                 "published": str(a["published_parsed"][0]) + "/" + str(a["published_parsed"][1]) + "/" + str(a["published_parsed"][2]),
                 "summary" : re.sub('<span.*?</span>','',a["summary"], flags=re.DOTALL),
                 "short_contents" : striphtml(a["content"][0]["value"])[0:400] + "...",
                 "full_contents" : a["content"][0]["value"],
                } for a in feed.entries]
-
-# Create your views here.
-def HomeView(request):
     return render(request, "homepage/home.html", {"entries" : entries})
+
 
 def AboutView(request):
     return render(request, "homepage/about.html")
 
 def BlogView(request):
-    
-    
-
+    feed = feedparser.parse(rssURL)
+    entries = [{"title" : a["title"], 
+                "link" : a["link"], 
+                "published": str(a["published_parsed"][0]) + "/" + str(a["published_parsed"][1]) + "/" + str(a["published_parsed"][2]),
+                "summary" : re.sub('<span.*?</span>','',a["summary"], flags=re.DOTALL),
+                "short_contents" : striphtml(a["content"][0]["value"])[0:400] + "...",
+                "full_contents" : a["content"][0]["value"],
+               } for a in feed.entries]
     return render(request, "homepage/blog.html", {"entries" : entries})
