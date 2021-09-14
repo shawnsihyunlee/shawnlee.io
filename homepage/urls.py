@@ -5,5 +5,5 @@ app_name = 'homepage'
 urlpatterns = [
     path("", views.HomeView, name="home"),
     path("about/", views.AboutView, name="about"),
-    path("blog/", views.BlogView, name="blog"),
+    path("blog/", views.BlogView, name="blog"),   # Replace with Wordpress API.
 ]
