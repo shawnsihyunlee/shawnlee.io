@@ -18,7 +18,7 @@ def HomeView(request):
                 "link" : a["link"], 
                 "published": str(a["published_parsed"][0]) + "/" + str(a["published_parsed"][1]) + "/" + str(a["published_parsed"][2]),
                 "summary" : re.sub('<span.*?</span>','',a["summary"], flags=re.DOTALL),
-                "short_contents" : striphtml(a["content"][0]["value"])[0:400] + "...",
+                "short_contents" : striphtml(a["content"][0]["value"])[0:500] + "...",
                 "full_contents" : a["content"][0]["value"],
                } for a in feed.entries]
     return render(request, "homepage/home.html", {"entries" : entries})
@@ -33,7 +33,7 @@ def BlogView(request):
                 "link" : a["link"], 
                 "published": str(a["published_parsed"][0]) + "/" + str(a["published_parsed"][1]) + "/" + str(a["published_parsed"][2]),
                 "summary" : re.sub('<span.*?</span>','',a["summary"], flags=re.DOTALL),
-                "short_contents" : striphtml(a["content"][0]["value"])[0:400] + "...",
+                "short_contents" : striphtml(a["content"][0]["value"])[0:500] + "...",
                 "full_contents" : a["content"][0]["value"],
                } for a in feed.entries]
     return render(request, "homepage/blog.html", {"entries" : entries})
