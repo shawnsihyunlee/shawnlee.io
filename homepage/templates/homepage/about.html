@@ -23,11 +23,51 @@
     <h1 class="display-3 text-center" style="font-weight: 700; color: #283618;">
         About Me
     </h1>
-        <div class="p-5 text-center" style="letter-spacing:0.03em;">
+    <div class="p-5 text-center" style="letter-spacing:0.03em;">
+        <img src="{% static 'homepage/images/about_me.jpg' %}" class="img-fluid rounded mx-auto d-block" alt="Me in uniform!">
+        <br>
+        <h3 class="text-center" style="font-weight: 700;  color: #283618;">
+            Who is this nerd?
+        </h3>
+        <br>
+              <p>
+          Hey, I'm Shawn. Welcome to my website!
+        </p> 
+        
+      <p>
+          ...no, that's a huge overstatement.
+      </p>
+    <p>
+        Uh... welcome to the thing that is a conglomeration of crudely constructed HTML+CSS and Django code snippets that I copy-pasted from StackOverflow.
+    </p>
+      <p>
+          I'm not even joking -- that's all that this is. The fancy navbar at the top? That dynamically generated blog post feed? That's all just copy-pasted code that I spent hours tweaking. 
+      </p>
+
+          <p>
+          Then again, maybe that's really all coding is. 
+      </p>
+        <hr>
+            <p>     
+                  I'm a freshman at Carnegie Mellon University's School of Computer Science.
+      </p>
+       
+        <p>
+            I like coding, making music, videography, playing badminton/basketball/guitar/League of Legends (and be terrible at all four), and cultivating deep, trusting relationships with people I like and trust.
+        </p>
+        <hr>
+                  <p>
+          Feel free to look around my website, but trust me: I am terrible at CSS. I literally started web development two weeks ago. So if like my navbar suddenly overlaps elements of my site, or like a heading looks really oddly positioned, give me a break. This isn't fucking Wordpress or Wix, I'm writing code to try to make this pretty.
+      </p>
+        <p>
+            Again, welcome. If you've read this far, and you're bored, please DM me (Instagram: @shawn.leee) about what you've had for lunch. I'm probably bored as fuck too.
+        </p>
+  </div>
+        {% comment %} <div class="p-5 text-center" style="letter-spacing:0.03em;">
             <img src="{% static 'homepage/images/about_me.jpg' %}" class="img-fluid rounded mx-auto d-block" alt="Me in uniform!">
             <br>
             <h3 class="text-center" style="font-weight: 700;  color: #283618;">
-                Who the fuck is this nerd?
+                Who is this nerd?
             </h3>
             <br>
                   <p>
@@ -67,7 +107,7 @@
             <p>
                 Again, welcome. If you've read this far, and you're bored, please DM me (Instagram: @shawn.leee) about what you've had for lunch. I'm probably bored as fuck too.
             </p>
-      </div>
+      </div> {% endcomment %}
 </div>
 {% endblock %}
 
