@@ -9,5 +9,3 @@ Created with Django, Bootstrap, and JQuery.
 - JQuery
 - Parsing XML documents
 - Database Management
-
-Not being updated.
