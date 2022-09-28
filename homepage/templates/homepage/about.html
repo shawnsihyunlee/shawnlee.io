@@ -3,31 +3,16 @@
 
 {% block content %}
 
-<style>
-
-@media (min-width: 900px) {
-    .container-small {
-        width: 900px;
-    }
-    .container-large {
-        width: 1500px;
-    } 
-}
-
-.container-small, .container-large {
-    max-width: 100%;
-}
-</style>
 
 <div class="container container-small">
     <h1 class="display-3 text-center" style="font-weight: 700; color: #283618;">
         About Me
     </h1>
     <div class="p-5 text-center" style="letter-spacing:0.03em;">
-        <img src="{% static 'homepage/images/about_me.jpg' %}" class="img-fluid rounded mx-auto d-block" alt="Me in uniform!">
+        <img src="{% static 'homepage/images/about_me.jpg' %}" class="img-fluid rounded mx-auto d-block" style="max-width: 60%" alt="Me in uniform!">
         <br>
         <h3 class="text-center" style="font-weight: 700;  color: #283618;">
-            Who is this nerd?
+            Shawn Lee
         </h3>
         <br>
               <p>
@@ -60,7 +45,7 @@
           Feel free to look around my website, but trust me: I am terrible at CSS. I literally started web development two weeks ago. So if like my navbar suddenly overlaps elements of my site, or like a heading looks really oddly positioned, give me a break. This isn't fucking Wordpress or Wix, I'm writing code to try to make this pretty.
       </p>
         <p>
-            Again, welcome. If you've read this far, and you're bored, please DM me (Instagram: @shawn.leee) about what you've had for lunch. I'm probably bored as fuck too.
+            Again, welcome. If you've read this far, and you're bored, please DM me (Instagram: @shawn.leee) about what you've had for lunch. I'm probably bored AF.
         </p>
   </div>
         {% comment %} <div class="p-5 text-center" style="letter-spacing:0.03em;">
