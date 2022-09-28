@@ -6,6 +6,10 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
 
+html, body{
+  overflow-x: hidden;
+}
+
 
 body {
   padding-top: 0px !important;
@@ -290,7 +294,7 @@ right: -0.1vw;
 top: -0.1vw; 
 transform:scaleX(1.2);
 transform-origin: 100% 0;
-animation: 12s infinite alternate shape-anim-1939  linear;
+animation: 8s infinite alternate shape-anim-1939  linear;
 background-size: 100% 199px;
 background-position: 50% 0%;  
 }
@@ -314,6 +318,7 @@ background-size: 100% calc(2vw + 199px);
   position:absolute;
   left:10%;
   bottom:10%;
+  margin-right: 40px;
 }
 
 .typedTextContainer p{
@@ -390,3 +395,37 @@ background-size: 100% calc(2vw + 199px);
   opacity:0%;
   transition: ease-in-out 0.5s;
 }
+
+
+/* Fade in out on observe */
+
+.fade-in{
+  opacity: 0;
+  transition: opacity 250ms ease-in;
+}
+
+.fade-in.appear {
+  opacity: 1;
+}
+
+.from-left{
+  transform: translateX(-50%);
+}
+
+.from-right{
+  transform: translateX(50%);
+}
+
+.from-left, .from-right{
+  transition: opacity 250ms ease-in, transform 400ms ease-in-out;
+  opacity: 0;
+}
+
+.from-left.appear, .from-right.appear{
+  transform: translateX(0);
+  opacity: 1;
+}
+
+/* Space projects */
+
+.project + .project { margin-top: 50px; }

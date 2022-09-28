@@ -1,98 +1,46 @@
-{% extends 'Tracker/navbar.html' %}
+{% extends 'homepage/navbar.html' %}
 {% load static %}
-
 {% block content %}
-
-
-<div class="container container-small">
-    <h1 class="display-3 text-center" style="font-weight: 700; color: #283618;">
-        About Me
-    </h1>
-    <div class="p-5 text-center" style="letter-spacing:0.03em;">
-        <img src="{% static 'homepage/images/about_me.jpg' %}" class="img-fluid rounded mx-auto d-block" style="max-width: 60%" alt="Me in uniform!">
-        <br>
-        <h3 class="text-center" style="font-weight: 700;  color: #283618;">
-            Shawn Lee
-        </h3>
-        <br>
-              <p>
-          Hey, I'm Shawn. Welcome to my website!
-        </p> 
-        
-      <p>
-          ...no, that's a huge overstatement.
-      </p>
-    <p>
-        Uh... welcome to the thing that is a conglomeration of crudely constructed HTML+CSS and Django code snippets that I copy-pasted from StackOverflow.
-    </p>
-      <p>
-          I'm not even joking -- that's all that this is. The fancy navbar at the top? That dynamically generated blog post feed? That's all just copy-pasted code that I spent hours tweaking. 
-      </p>
-
-          <p>
-          Then again, maybe that's really all coding is. 
-      </p>
-        <hr>
-            <p>     
-                  I'm a freshman at Carnegie Mellon University's School of Computer Science.
-      </p>
-       
-        <p>
-            I like coding, making music, videography, playing badminton/basketball/guitar/League of Legends (and be terrible at all four), and cultivating deep, trusting relationships with people I like and trust.
-        </p>
-        <hr>
-                  <p>
-          Feel free to look around my website, but trust me: I am terrible at CSS. I literally started web development two weeks ago. So if like my navbar suddenly overlaps elements of my site, or like a heading looks really oddly positioned, give me a break. This isn't fucking Wordpress or Wix, I'm writing code to try to make this pretty.
-      </p>
-        <p>
-            Again, welcome. If you've read this far, and you're bored, please DM me (Instagram: @shawn.leee) about what you've had for lunch. I'm probably bored AF.
-        </p>
-  </div>
-        {% comment %} <div class="p-5 text-center" style="letter-spacing:0.03em;">
-            <img src="{% static 'homepage/images/about_me.jpg' %}" class="img-fluid rounded mx-auto d-block" alt="Me in uniform!">
-            <br>
-            <h3 class="text-center" style="font-weight: 700;  color: #283618;">
-                Who is this nerd?
-            </h3>
-            <br>
-                  <p>
-              Hey, I'm Shawn. Welcome to my website!
-            </p> 
+    <div class="container container-small">
+        <h1 class="display-3 text-center"
+            style="font-weight: 700;
+                   color: #283618;">About Me</h1>
+        <div class="container">
             
-          <p>
-              ...no, that's a huge overstatement.
-          </p>
-        <p>
-            Uh... welcome to the thing that is a conglomeration of crudely constructed HTML+CSS and Django code snippets that I copy-pasted from StackOverflow.
-        </p>
-          <p>
-              I'm not even joking -- that's all that this is. The fancy navbar at the top? That cute progress bar that shows how much I have left in the army? The workout tracker that I spent a fucking week trying to code? (Yeah, I know. Who the fuck spends a week making a shitty app like that? Answer: Me) That's all just copy-pasted code that I spent hours tweaking. 
-          </p>
-    
-              <p>
-              Then again, maybe that's really all coding is. 
-          </p>
-            <hr>
-                <p>     
-                      I'm supposed to be an incoming freshman at Carnegie Mellon University's School of Computer Science, but right now I'm stuck in the middle of nowhere, wearing an army uniform and waking up at 6:30 AM every day. "Serving my country", they call it, but for me it's just creating Excel spreadsheets and cleaning the bathroom mindlessly, thinking about what barely-edible-menu is going to be for dinner today.
-          </p>
+        </div>
+        <div class="p-5 text-center" style="letter-spacing:0.03em;">
+            <img src="{% static 'homepage/images/about_me.jpg' %}"
+                 class="img-fluid rounded mx-auto d-block"
+                 style="max-width: 60%"
+                 alt="Me in uniform!">
+            <br>
+            <h3 class="text-center" style="font-weight: 700;  color: #283618;">Hi!</h3>
+            <br>
+            <p>Hey, I'm Shawn. Welcome to my personal portfolio website!</p>
+            <p>...no, that's a huge overstatement.</p>
             <p>
-                More seriously, I'm currently serving in the ROK Army 35th Division as a military intelligence agent normally, and a military interpreter during training. My discharge is scheduled for May 22, 2022. If you want to learn more about my life in the army, come read my blog. 
+                Uh... welcome to the thing that is a conglomeration of crudely constructed HTML, CSS, and JS code snippets that I copy-pasted from StackOverflow and Youtube.
             </p>
+            <p>
+                I'm not even joking -- that's all that this is. The fancy navbar at the top? 
+                 That cool typewriter effect? The pretty animations on my projects?
+                 That's all just copy-pasted code that I spent hours tweaking.
+            </p>
+            <p>Then again, maybe that's really all coding is.</p>
+            <hr>
+            <p>I'm a freshman at Carnegie Mellon University's School of Computer Science.</p>
             <p>
                 I like coding, making music, videography, playing badminton/basketball/guitar/League of Legends (and be terrible at all four), and cultivating deep, trusting relationships with people I like and trust.
             </p>
             <p>
-                I also like freedom and alcohol. Turns out both aren't available in the army. Please get me out of here.
+                Feel free to look around my website, but there's not too much else to see (besides my <a href="https://shawnleemilitary.wordpress.com">blog</a>, maybe?). 
+                 I literally started web development a few weeks ago. 
+                 So if like my navbar suddenly overlaps elements of my site, or like a heading looks really oddly positioned, I hope you give me a break. 
+                 This isn't Wordpress or Wix, I'm writing code to try to make this pretty.
             </p>
-            <hr>
-                      <p>
-              Feel free to look around my website, but trust me: I am terrible at CSS. I literally started web development two weeks ago. So if like my navbar suddenly overlaps elements of my site, or like a heading looks really oddly positioned, give me a break. This isn't fucking Wordpress or Wix, I'm writing code to try to make this pretty.
-          </p>
             <p>
-                Again, welcome. If you've read this far, and you're bored, please DM me (Instagram: @shawn.leee) about what you've had for lunch. I'm probably bored as fuck too.
+                Again, welcome. If you've read this far, you get a virtual hug from me. :)
             </p>
-      </div> {% endcomment %}
-</div>
+        </div>
+    </div>
 {% endblock %}
-
